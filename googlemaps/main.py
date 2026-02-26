@@ -2,7 +2,9 @@ import asyncio
 import json
 from shapely.geometry import box, Point
 from playwright.async_api import async_playwright
+import time
 
+start = time.time() 
 # ==========================================
 # CONFIGURATION
 # ==========================================
@@ -209,7 +211,7 @@ async def main():
         
         await browser.close()
 
-    print(f"\nScraping complete! Successfully extracted {len(state['final_results'])} leads.")
+    print(f"\nScraping complete! Successfully extracted {len(state['final_results'])} leads in {round(time.time() - start, 1)}s!")
     with open("leads.json", "w", encoding="utf-8") as f:
         json.dump(state['final_results'], f, indent=4, ensure_ascii=False)
 

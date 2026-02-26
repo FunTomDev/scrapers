@@ -1,10 +1,115 @@
 [
     {
-        "name": "Burgerlab",
-        "id": "0x471ecda8944497d9:0xbe46b72e2003980",
-        "latitude": 52.223554,
-        "longitude": 21.016981,
-        "url": "https://www.google.com/maps/place/Burgerlab/data=!4m7!3m6!1s0x471ecda8944497d9:0xbe46b72e2003980!8m2!3d52.223554!4d21.016981!16s%2Fg%2F11shkg4h8q!19sChIJ2ZdElKjNHkcRgDkA4nJr5As?authuser=0&hl=pl&rclk=1"
+        "name": "Seafood House Grill & Wine",
+        "id": "0x47192d515dec0d6f:0x61b31bad5851555f",
+        "latitude": 52.174543,
+        "longitude": 21.079118,
+        "url": "https://www.google.com/maps/place/Seafood+House+Grill+%26+Wine/data=!4m7!3m6!1s0x47192d515dec0d6f:0x61b31bad5851555f!8m2!3d52.174543!4d21.079118!16s%2Fg%2F11zjjfz_5_!19sChIJbw3sXVEtGUcRX1VRWK0bs2E?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Restauracja Nowy Gurewicz",
+        "id": "0x47192bbb3cec682b:0xde6f6a755190d77e",
+        "latitude": 52.102611,
+        "longitude": 21.270796,
+        "url": "https://www.google.com/maps/place/Restauracja+Nowy+Gurewicz/data=!4m7!3m6!1s0x47192bbb3cec682b:0xde6f6a755190d77e!8m2!3d52.102611!4d21.270796!16s%2Fg%2F11np0grqt2!19sChIJK2jsPLsrGUcRfteQUXVqb94?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Munja Grzybowska 43",
+        "id": "0x471ecc85e8807ccf:0x4ff3c0276f8a93c6",
+        "latitude": 52.2347467,
+        "longitude": 20.9919811,
+        "url": "https://www.google.com/maps/place/Munja+Grzybowska+43/data=!4m7!3m6!1s0x471ecc85e8807ccf:0x4ff3c0276f8a93c6!8m2!3d52.2347467!4d20.9919811!16s%2Fg%2F11dyznyq7n!19sChIJz3yA6IXMHkcRxpOKbyfA808?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Restauracja Primitivo Kuchnia i Wino - kuchnia śródziemnomorska Warszawa",
+        "id": "0x471ecdc94ec04b1f:0xf0e7b1a601a1f505",
+        "latitude": 52.235268,
+        "longitude": 20.992115,
+        "url": "https://www.google.com/maps/place/Restauracja+Primitivo+Kuchnia+i+Wino+-+kuchnia+%C5%9Br%C3%B3dziemnomorska+Warszawa/data=!4m7!3m6!1s0x471ecdc94ec04b1f:0xf0e7b1a601a1f505!8m2!3d52.235268!4d20.992115!16s%2Fg%2F11vprytzpx!19sChIJH0vATsnNHkcRBfWhAaax5_A?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Savoré restaurant • cocktail bar",
+        "id": "0x471ecd6ca6973eab:0x57acca4fdbc5ba63",
+        "latitude": 52.233984,
+        "longitude": 20.9896694,
+        "url": "https://www.google.com/maps/place/Savor%C3%A9+restaurant+%E2%80%A2+cocktail+bar/data=!4m7!3m6!1s0x471ecd6ca6973eab:0x57acca4fdbc5ba63!8m2!3d52.233984!4d20.9896694!16s%2Fg%2F11t46md998!19sChIJqz6XpmzNHkcRY7rF20_KrFc?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Wałek Warszawski",
+        "id": "0x471ecd98af9bfdeb:0x2ac98c1c4da75aba",
+        "latitude": 52.2330038,
+        "longitude": 20.9910516,
+        "url": "https://www.google.com/maps/place/Wa%C5%82ek+Warszawski/data=!4m7!3m6!1s0x471ecd98af9bfdeb:0x2ac98c1c4da75aba!8m2!3d52.2330038!4d20.9910516!16s%2Fg%2F11q37d61l3!19sChIJ6_2br5jNHkcRulqnTRyMySo?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Baila Show&Dining",
+        "id": "0x471ecda87beb3c5b:0xc9ab537b29980992",
+        "latitude": 52.2344789,
+        "longitude": 20.9876817,
+        "url": "https://www.google.com/maps/place/Baila+Show%26Dining/data=!4m7!3m6!1s0x471ecda87beb3c5b:0xc9ab537b29980992!8m2!3d52.2344789!4d20.9876817!16s%2Fg%2F11rgb25srv!19sChIJWzzre6jNHkcRkgmYKXtTq8k?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Casa Ristoranti",
+        "id": "0x471ecc8f3ac76b23:0x660c5c6c9d3113fb",
+        "latitude": 52.2338114,
+        "longitude": 20.9964903,
+        "url": "https://www.google.com/maps/place/Casa+Ristoranti/data=!4m7!3m6!1s0x471ecc8f3ac76b23:0x660c5c6c9d3113fb!8m2!3d52.2338114!4d20.9964903!16s%2Fg%2F11dxl9jg03!19sChIJI2vHOo_MHkcR-xMxnWxcDGY?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Munja Browary Warszawskie",
+        "id": "0x471ecd03d675699d:0xac86a1fe1f582d14",
+        "latitude": 52.2345263,
+        "longitude": 20.9872126,
+        "url": "https://www.google.com/maps/place/Munja+Browary+Warszawskie/data=!4m7!3m6!1s0x471ecd03d675699d:0xac86a1fe1f582d14!8m2!3d52.2345263!4d20.9872126!16s%2Fg%2F11r9vb_k4q!19sChIJnWl11gPNHkcRFC1YH_6hhqw?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "VIWOK 58",
+        "id": "0x471ecdd3b07dcdef:0x986c7e62177ad3a9",
+        "latitude": 52.2350248,
+        "longitude": 20.9909458,
+        "url": "https://www.google.com/maps/place/VIWOK+58/data=!4m7!3m6!1s0x471ecdd3b07dcdef:0x986c7e62177ad3a9!8m2!3d52.2350248!4d20.9909458!16s%2Fg%2F11w7k39ppb!19sChIJ7819sNPNHkcRqdN6F2J-bJg?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Niedaleko Damaszku - Vegan restaurant",
+        "id": "0x471ecc8f35fcb981:0x42b1ad8167790c78",
+        "latitude": 52.2345886,
+        "longitude": 20.9962596,
+        "url": "https://www.google.com/maps/place/Niedaleko+Damaszku+-+Vegan+restaurant/data=!4m7!3m6!1s0x471ecc8f35fcb981:0x42b1ad8167790c78!8m2!3d52.2345886!4d20.9962596!16s%2Fg%2F11dft7_2kb!19sChIJgbn8NY_MHkcReAx5Z4GtsUI?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Kawiarnia La Lucy",
+        "id": "0x471ecdd895ce96eb:0xa6b5437c79cdc918",
+        "latitude": 52.2333651,
+        "longitude": 20.9944348,
+        "url": "https://www.google.com/maps/place/Kawiarnia+La+Lucy/data=!4m7!3m6!1s0x471ecdd895ce96eb:0xa6b5437c79cdc918!8m2!3d52.2333651!4d20.9944348!16s%2Fg%2F11gxmtnc8k!19sChIJ65bOldjNHkcRGMnNeXxDtaY?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Royal Restaurant - polska kuchnia",
+        "id": "0x471ecd263ffa770b:0x2d5e00c22f6e910c",
+        "latitude": 52.2360168,
+        "longitude": 21.0086082,
+        "url": "https://www.google.com/maps/place/Royal+Restaurant+-+polska+kuchnia/data=!4m7!3m6!1s0x471ecd263ffa770b:0x2d5e00c22f6e910c!8m2!3d52.2360168!4d21.0086082!16s%2Fg%2F11vz0qtl99!19sChIJC3f6PybNHkcRDJFuL8IAXi0?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "the EATERY trad.",
+        "id": "0x471ecd6f8ace4b1b:0xa9807cfc5f6dc1f4",
+        "latitude": 52.2379456,
+        "longitude": 21.0322571,
+        "url": "https://www.google.com/maps/place/the+EATERY+trad./data=!4m7!3m6!1s0x471ecd6f8ace4b1b:0xa9807cfc5f6dc1f4!8m2!3d52.2379456!4d21.0322571!16s%2Fg%2F11ld7m307l!19sChIJG0vOim_NHkcR9MFtX_x8gKk?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "BROOKLYN",
+        "id": "0x471ecc8ed191a3ed:0xac28dc41e598bc30",
+        "latitude": 52.2339734,
+        "longitude": 20.9985223,
+        "url": "https://www.google.com/maps/place/BROOKLYN/data=!4m7!3m6!1s0x471ecc8ed191a3ed:0xac28dc41e598bc30!8m2!3d52.2339734!4d20.9985223!16s%2Fg%2F1s04bsmwp!19sChIJ7aOR0Y7MHkcRMLyY5UHcKKw?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Olivos Restaurant",
+        "id": "0x471ecd72a8c6c84f:0xd072afec7df97d50",
+        "latitude": 52.2353332,
+        "longitude": 20.9872998,
+        "url": "https://www.google.com/maps/place/Olivos+Restaurant/data=!4m7!3m6!1s0x471ecd72a8c6c84f:0xd072afec7df97d50!8m2!3d52.2353332!4d20.9872998!16s%2Fg%2F11q2yqrq9c!19sChIJT8jGqHLNHkcRUH35feyvctA?authuser=0&hl=pl&rclk=1"
     },
     {
         "name": "Mandala Sienna",
@@ -189,382 +294,46 @@
         "url": "https://www.google.com/maps/place/SzaurMafia:+Ukrainian+street+food+restaurant+%7C+Warszawa/data=!4m7!3m6!1s0x471ecda0d49198d7:0x44b9ede710fe4faf!8m2!3d52.2329723!4d20.9908705!16s%2Fg%2F11v9jbfjz6!19sChIJ15iR1KDNHkcRr0_-EOftuUQ?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Munja Grzybowska 43",
-        "id": "0x471ecc85e8807ccf:0x4ff3c0276f8a93c6",
-        "latitude": 52.2347467,
-        "longitude": 20.9919811,
-        "url": "https://www.google.com/maps/place/Munja+Grzybowska+43/data=!4m7!3m6!1s0x471ecc85e8807ccf:0x4ff3c0276f8a93c6!8m2!3d52.2347467!4d20.9919811!16s%2Fg%2F11dyznyq7n!19sChIJz3yA6IXMHkcRxpOKbyfA808?authuser=0&hl=pl&rclk=1"
+        "name": "BeKeF",
+        "id": "0x471eccf1ec25a64d:0x30366752fdfbea4f",
+        "latitude": 52.2313679,
+        "longitude": 20.9989691,
+        "url": "https://www.google.com/maps/place/BeKeF/data=!4m7!3m6!1s0x471eccf1ec25a64d:0x30366752fdfbea4f!8m2!3d52.2313679!4d20.9989691!16s%2Fg%2F11b6_jkkft!19sChIJTaYl7PHMHkcRT-r7_VJnNjA?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Restauracja Primitivo Kuchnia i Wino - kuchnia śródziemnomorska Warszawa",
-        "id": "0x471ecdc94ec04b1f:0xf0e7b1a601a1f505",
-        "latitude": 52.235268,
-        "longitude": 20.992115,
-        "url": "https://www.google.com/maps/place/Restauracja+Primitivo+Kuchnia+i+Wino+-+kuchnia+%C5%9Br%C3%B3dziemnomorska+Warszawa/data=!4m7!3m6!1s0x471ecdc94ec04b1f:0xf0e7b1a601a1f505!8m2!3d52.235268!4d20.992115!16s%2Fg%2F11vprytzpx!19sChIJH0vATsnNHkcRBfWhAaax5_A?authuser=0&hl=pl&rclk=1"
+        "name": "Nova Wola - Restauracja z kuchnią polską",
+        "id": "0x471ecdc2381d5d09:0xb5f17f04bdc5bd9a",
+        "latitude": 52.2295414,
+        "longitude": 20.9842666,
+        "url": "https://www.google.com/maps/place/Nova+Wola+-+Restauracja+z+kuchni%C4%85+polsk%C4%85/data=!4m7!3m6!1s0x471ecdc2381d5d09:0xb5f17f04bdc5bd9a!8m2!3d52.2295414!4d20.9842666!16s%2Fg%2F11lfcq093x!19sChIJCV0dOMLNHkcRmr3FvQR_8bU?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Savoré restaurant • cocktail bar",
-        "id": "0x471ecd6ca6973eab:0x57acca4fdbc5ba63",
-        "latitude": 52.233984,
-        "longitude": 20.9896694,
-        "url": "https://www.google.com/maps/place/Savor%C3%A9+restaurant+%E2%80%A2+cocktail+bar/data=!4m7!3m6!1s0x471ecd6ca6973eab:0x57acca4fdbc5ba63!8m2!3d52.233984!4d20.9896694!16s%2Fg%2F11t46md998!19sChIJqz6XpmzNHkcRY7rF20_KrFc?authuser=0&hl=pl&rclk=1"
+        "name": "Patio & Tulipe - Cocktail Bar & Restaurant",
+        "id": "0x471ecda45fcc57bb:0x5dbc14181a3c136d",
+        "latitude": 52.2261192,
+        "longitude": 20.9891364,
+        "url": "https://www.google.com/maps/place/Patio+%26+Tulipe+-+Cocktail+Bar+%26+Restaurant/data=!4m7!3m6!1s0x471ecda45fcc57bb:0x5dbc14181a3c136d!8m2!3d52.2261192!4d20.9891364!16s%2Fg%2F11pyk22c8j!19sChIJu1fMX6TNHkcRbRM8GhgUvF0?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Wałek Warszawski",
-        "id": "0x471ecd98af9bfdeb:0x2ac98c1c4da75aba",
-        "latitude": 52.2330038,
-        "longitude": 20.9910516,
-        "url": "https://www.google.com/maps/place/Wa%C5%82ek+Warszawski/data=!4m7!3m6!1s0x471ecd98af9bfdeb:0x2ac98c1c4da75aba!8m2!3d52.2330038!4d20.9910516!16s%2Fg%2F11q37d61l3!19sChIJ6_2br5jNHkcRulqnTRyMySo?authuser=0&hl=pl&rclk=1"
+        "name": "Burgerlab",
+        "id": "0x471ecda8944497d9:0xbe46b72e2003980",
+        "latitude": 52.223554,
+        "longitude": 21.016981,
+        "url": "https://www.google.com/maps/place/Burgerlab/data=!4m7!3m6!1s0x471ecda8944497d9:0xbe46b72e2003980!8m2!3d52.223554!4d21.016981!16s%2Fg%2F11shkg4h8q!19sChIJ2ZdElKjNHkcRgDkA4nJr5As?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Baila Show&Dining",
-        "id": "0x471ecda87beb3c5b:0xc9ab537b29980992",
-        "latitude": 52.2344789,
-        "longitude": 20.9876817,
-        "url": "https://www.google.com/maps/place/Baila+Show%26Dining/data=!4m7!3m6!1s0x471ecda87beb3c5b:0xc9ab537b29980992!8m2!3d52.2344789!4d20.9876817!16s%2Fg%2F11rgb25srv!19sChIJWzzre6jNHkcRkgmYKXtTq8k?authuser=0&hl=pl&rclk=1"
+        "name": "Street Restauracja",
+        "id": "0x471ecd95c913a4e7:0xb65e289d5b152713",
+        "latitude": 52.2313203,
+        "longitude": 20.9844122,
+        "url": "https://www.google.com/maps/place/Street+Restauracja/data=!4m7!3m6!1s0x471ecd95c913a4e7:0xb65e289d5b152713!8m2!3d52.2313203!4d20.9844122!16s%2Fg%2F11hx_cj9g0!19sChIJ56QTyZXNHkcREycVW50oXrY?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Casa Ristoranti",
-        "id": "0x471ecc8f3ac76b23:0x660c5c6c9d3113fb",
-        "latitude": 52.2338114,
-        "longitude": 20.9964903,
-        "url": "https://www.google.com/maps/place/Casa+Ristoranti/data=!4m7!3m6!1s0x471ecc8f3ac76b23:0x660c5c6c9d3113fb!8m2!3d52.2338114!4d20.9964903!16s%2Fg%2F11dxl9jg03!19sChIJI2vHOo_MHkcR-xMxnWxcDGY?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Munja Browary Warszawskie",
-        "id": "0x471ecd03d675699d:0xac86a1fe1f582d14",
-        "latitude": 52.2345263,
-        "longitude": 20.9872126,
-        "url": "https://www.google.com/maps/place/Munja+Browary+Warszawskie/data=!4m7!3m6!1s0x471ecd03d675699d:0xac86a1fe1f582d14!8m2!3d52.2345263!4d20.9872126!16s%2Fg%2F11r9vb_k4q!19sChIJnWl11gPNHkcRFC1YH_6hhqw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "VIWOK 58",
-        "id": "0x471ecdd3b07dcdef:0x986c7e62177ad3a9",
-        "latitude": 52.2350248,
-        "longitude": 20.9909458,
-        "url": "https://www.google.com/maps/place/VIWOK+58/data=!4m7!3m6!1s0x471ecdd3b07dcdef:0x986c7e62177ad3a9!8m2!3d52.2350248!4d20.9909458!16s%2Fg%2F11w7k39ppb!19sChIJ7819sNPNHkcRqdN6F2J-bJg?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Niedaleko Damaszku - Vegan restaurant",
-        "id": "0x471ecc8f35fcb981:0x42b1ad8167790c78",
-        "latitude": 52.2345886,
-        "longitude": 20.9962596,
-        "url": "https://www.google.com/maps/place/Niedaleko+Damaszku+-+Vegan+restaurant/data=!4m7!3m6!1s0x471ecc8f35fcb981:0x42b1ad8167790c78!8m2!3d52.2345886!4d20.9962596!16s%2Fg%2F11dft7_2kb!19sChIJgbn8NY_MHkcReAx5Z4GtsUI?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Kawiarnia La Lucy",
-        "id": "0x471ecdd895ce96eb:0xa6b5437c79cdc918",
-        "latitude": 52.2333651,
-        "longitude": 20.9944348,
-        "url": "https://www.google.com/maps/place/Kawiarnia+La+Lucy/data=!4m7!3m6!1s0x471ecdd895ce96eb:0xa6b5437c79cdc918!8m2!3d52.2333651!4d20.9944348!16s%2Fg%2F11gxmtnc8k!19sChIJ65bOldjNHkcRGMnNeXxDtaY?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Royal Restaurant - polska kuchnia",
-        "id": "0x471ecd263ffa770b:0x2d5e00c22f6e910c",
-        "latitude": 52.2360168,
-        "longitude": 21.0086082,
-        "url": "https://www.google.com/maps/place/Royal+Restaurant+-+polska+kuchnia/data=!4m7!3m6!1s0x471ecd263ffa770b:0x2d5e00c22f6e910c!8m2!3d52.2360168!4d21.0086082!16s%2Fg%2F11vz0qtl99!19sChIJC3f6PybNHkcRDJFuL8IAXi0?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "TIKHARI MODERN GEORGIA",
-        "id": "0x471ecd3e80cbcd93:0x679425bdac8b22b3",
-        "latitude": 52.240183,
-        "longitude": 20.994298,
-        "url": "https://www.google.com/maps/place/TIKHARI+MODERN+GEORGIA/data=!4m7!3m6!1s0x471ecd3e80cbcd93:0x679425bdac8b22b3!8m2!3d52.240183!4d20.994298!16s%2Fg%2F11vyfcm0wp!19sChIJk83LgD7NHkcRsyKLrL0llGc?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "the EATERY trad.",
-        "id": "0x471ecd6f8ace4b1b:0xa9807cfc5f6dc1f4",
-        "latitude": 52.2379456,
-        "longitude": 21.0322571,
-        "url": "https://www.google.com/maps/place/the+EATERY+trad./data=!4m7!3m6!1s0x471ecd6f8ace4b1b:0xa9807cfc5f6dc1f4!8m2!3d52.2379456!4d21.0322571!16s%2Fg%2F11ld7m307l!19sChIJG0vOim_NHkcR9MFtX_x8gKk?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "BROOKLYN",
-        "id": "0x471ecc8ed191a3ed:0xac28dc41e598bc30",
-        "latitude": 52.2339734,
-        "longitude": 20.9985223,
-        "url": "https://www.google.com/maps/place/BROOKLYN/data=!4m7!3m6!1s0x471ecc8ed191a3ed:0xac28dc41e598bc30!8m2!3d52.2339734!4d20.9985223!16s%2Fg%2F1s04bsmwp!19sChIJ7aOR0Y7MHkcRMLyY5UHcKKw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Olivos Restaurant",
-        "id": "0x471ecd72a8c6c84f:0xd072afec7df97d50",
-        "latitude": 52.2353332,
-        "longitude": 20.9872998,
-        "url": "https://www.google.com/maps/place/Olivos+Restaurant/data=!4m7!3m6!1s0x471ecd72a8c6c84f:0xd072afec7df97d50!8m2!3d52.2353332!4d20.9872998!16s%2Fg%2F11q2yqrq9c!19sChIJT8jGqHLNHkcRUH35feyvctA?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "NINE's Restaurant",
-        "id": "0x471ecd648d5b4325:0x210c1541f68a8766",
-        "latitude": 52.2353,
-        "longitude": 20.9872926,
-        "url": "https://www.google.com/maps/place/NINE%27s+Restaurant/data=!4m7!3m6!1s0x471ecd648d5b4325:0x210c1541f68a8766!8m2!3d52.2353!4d20.9872926!16s%2Fg%2F11rsbq_64h!19sChIJJUNbjWTNHkcRZoeK9kEVDCE?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Restauracja Delicja Polska",
-        "id": "0x471ecc66e561e1df:0x513943d088dfea6a",
-        "latitude": 52.2454325,
-        "longitude": 21.0142753,
-        "url": "https://www.google.com/maps/place/Restauracja+Delicja+Polska/data=!4m7!3m6!1s0x471ecc66e561e1df:0x513943d088dfea6a!8m2!3d52.2454325!4d21.0142753!16s%2Fg%2F1hc5pz3vx!19sChIJ3-Fh5WbMHkcRaurfiNBDOVE?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Ogród Smaku",
-        "id": "0x471ecc87f1d2909f:0x5f4b54eaa62e89a0",
-        "latitude": 52.2396489,
-        "longitude": 20.9965827,
-        "url": "https://www.google.com/maps/place/Ogr%C3%B3d+Smaku/data=!4m7!3m6!1s0x471ecc87f1d2909f:0x5f4b54eaa62e89a0!8m2!3d52.2396489!4d20.9965827!16s%2Fg%2F11gh3851yt!19sChIJn5DS8YfMHkcRoIkupupUS18?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Indian Summers",
-        "id": "0x471ecbdafffc18ef:0x6219cf0fb574347",
-        "latitude": 52.234811,
-        "longitude": 20.9961109,
-        "url": "https://www.google.com/maps/place/Indian+Summers/data=!4m7!3m6!1s0x471ecbdafffc18ef:0x6219cf0fb574347!8m2!3d52.234811!4d20.9961109!16s%2Fg%2F11fnrd6_x8!19sChIJ7xj8_9rLHkcRR0NX-_CcIQY?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Reina Steakhouse",
-        "id": "0x471ecdef0c1daa47:0x3b6f857849ec729",
-        "latitude": 52.234433,
-        "longitude": 21.0119,
-        "url": "https://www.google.com/maps/place/Reina+Steakhouse/data=!4m7!3m6!1s0x471ecdef0c1daa47:0x3b6f857849ec729!8m2!3d52.234433!4d21.0119!16s%2Fg%2F11qgfc5h6g!19sChIJR6odDO_NHkcRKceehFf4tgM?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "InFormal Kitchen",
-        "id": "0x471ecc6071b9cff9:0x95868e8e53efff0a",
-        "latitude": 52.2389951,
-        "longitude": 21.0137444,
-        "url": "https://www.google.com/maps/place/InFormal+Kitchen/data=!4m7!3m6!1s0x471ecc6071b9cff9:0x95868e8e53efff0a!8m2!3d52.2389951!4d21.0137444!16s%2Fg%2F11b6v61thp!19sChIJ-c-5cWDMHkcRCv_vU46OhpU?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "The Alchemist Grill & Cocktail",
-        "id": "0x471ecdc8901afccb:0xe9a8d3ec63671dee",
-        "latitude": 52.2368355,
-        "longitude": 21.0007137,
-        "url": "https://www.google.com/maps/place/The+Alchemist+Grill+%26+Cocktail/data=!4m7!3m6!1s0x471ecdc8901afccb:0xe9a8d3ec63671dee!8m2!3d52.2368355!4d21.0007137!16s%2Fg%2F11mgqx2h2h!19sChIJy_wakMjNHkcR7h1nY-zTqOk?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Prime Cut",
-        "id": "0x471ecd89be3ee719:0x3d2ca247b1dd83b8",
-        "latitude": 52.2344317,
-        "longitude": 20.9994726,
-        "url": "https://www.google.com/maps/place/Prime+Cut/data=!4m7!3m6!1s0x471ecd89be3ee719:0x3d2ca247b1dd83b8!8m2!3d52.2344317!4d20.9994726!16s%2Fg%2F11gjxts4vd!19sChIJGec-vonNHkcRuIPdsUeiLD0?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Restauracja Der Elefant",
-        "id": "0x471ecc6302ac14bd:0x6a3e70bd62672a8f",
-        "latitude": 52.2417903,
-        "longitude": 21.0035137,
-        "url": "https://www.google.com/maps/place/Restauracja+Der+Elefant/data=!4m7!3m6!1s0x471ecc6302ac14bd:0x6a3e70bd62672a8f!8m2!3d52.2417903!4d21.0035137!16s%2Fg%2F1q69jn46g!19sChIJvRSsAmPMHkcRjypnYr1wPmo?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "UKIM",
-        "id": "0x471ecc86fc1baebd:0x390ebce539eb5a5f",
-        "latitude": 52.238016,
-        "longitude": 20.9910348,
-        "url": "https://www.google.com/maps/place/UKIM/data=!4m7!3m6!1s0x471ecc86fc1baebd:0x390ebce539eb5a5f!8m2!3d52.238016!4d20.9910348!16s%2Fg%2F11gffy_n6q!19sChIJva4b_IbMHkcRX1rrOeW8Djk?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Francuska Robota",
-        "id": "0x471ecc8363485eaf:0xda9170d8c7dd44b3",
-        "latitude": 52.2343776,
-        "longitude": 20.9897812,
-        "url": "https://www.google.com/maps/place/Francuska+Robota/data=!4m7!3m6!1s0x471ecc8363485eaf:0xda9170d8c7dd44b3!8m2!3d52.2343776!4d20.9897812!16s%2Fg%2F11f3jl9g64!19sChIJr15IY4PMHkcRs0Tdx9hwkdo?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Pierogarnia \"U Kresowiaka\"",
-        "id": "0x471eccef77cc489f:0xb576ac1757aba9b8",
-        "latitude": 52.2223526,
-        "longitude": 21.0178029,
-        "url": "https://www.google.com/maps/place/Pierogarnia+%22U+Kresowiaka%22/data=!4m7!3m6!1s0x471eccef77cc489f:0xb576ac1757aba9b8!8m2!3d52.2223526!4d21.0178029!16s%2Fg%2F11gg65y340!19sChIJn0jMd-_MHkcRuKmrVxesdrU?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Wi-Taj",
-        "id": "0x471eccef7a915e07:0xadd6b5dabb70dd43",
-        "latitude": 52.2218968,
-        "longitude": 21.0177409,
-        "url": "https://www.google.com/maps/place/Wi-Taj/data=!4m7!3m6!1s0x471eccef7a915e07:0xadd6b5dabb70dd43!8m2!3d52.2218968!4d21.0177409!16s%2Fg%2F11cp7pxcbr!19sChIJB16Reu_MHkcRQ91wu9q11q0?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "The Eatery",
-        "id": "0x471ed315d621c6d5:0x2cb6e4e910d1c857",
-        "latitude": 52.2223082,
-        "longitude": 21.0144058,
-        "url": "https://www.google.com/maps/place/The+Eatery/data=!4m7!3m6!1s0x471ed315d621c6d5:0x2cb6e4e910d1c857!8m2!3d52.2223082!4d21.0144058!16s%2Fg%2F11n7z7xs3h!19sChIJ1cYh1hXTHkcRV8jREOnktiw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "U Szwejka",
-        "id": "0x471eccef6adf9971:0x35458faf5f5f895d",
-        "latitude": 52.2213354,
-        "longitude": 21.0160374,
-        "url": "https://www.google.com/maps/place/U+Szwejka/data=!4m7!3m6!1s0x471eccef6adf9971:0x35458faf5f5f895d!8m2!3d52.2213354!4d21.0160374!16s%2Fg%2F1tm0rxqh!19sChIJcZnfau_MHkcRXYlfX6-PRTU?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Bar Mleczny Mokotowska 22",
-        "id": "0x471ecce5857c6d79:0xf9a603bc760172dc",
-        "latitude": 52.2215283,
-        "longitude": 21.0192928,
-        "url": "https://www.google.com/maps/place/Bar+Mleczny+Mokotowska+22/data=!4m7!3m6!1s0x471ecce5857c6d79:0xf9a603bc760172dc!8m2!3d52.2215283!4d21.0192928!16s%2Fg%2F11g6nzykx9!19sChIJeW18heXMHkcR3HIBdrwDpvk?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Bianca Mozzarella",
-        "id": "0x471ecb3e7c452c53:0x9b5fa9e7573d9902",
-        "latitude": 52.2212433,
-        "longitude": 21.0201695,
-        "url": "https://www.google.com/maps/place/Bianca+Mozzarella/data=!4m7!3m6!1s0x471ecb3e7c452c53:0x9b5fa9e7573d9902!8m2!3d52.2212433!4d21.0201695!16s%2Fg%2F11lgsk3j3n!19sChIJUyxFfD7LHkcRApk9V-epX5s?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Whiskey in the Jar",
-        "id": "0x471ecd7333dc748d:0xe0974a9ce9003567",
-        "latitude": 52.2231413,
-        "longitude": 21.0149735,
-        "url": "https://www.google.com/maps/place/Whiskey+in+the+Jar/data=!4m7!3m6!1s0x471ecd7333dc748d:0xe0974a9ce9003567!8m2!3d52.2231413!4d21.0149735!16s%2Fg%2F11j7h6p85x!19sChIJjXTcM3PNHkcRZzUA6ZxKl-A?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Restauracja Wiesz Co Zjesz",
-        "id": "0x471eccef42fbdd95:0x28ffd051c3be7ab0",
-        "latitude": 52.2210293,
-        "longitude": 21.0168745,
-        "url": "https://www.google.com/maps/place/Restauracja+Wiesz+Co+Zjesz/data=!4m7!3m6!1s0x471eccef42fbdd95:0x28ffd051c3be7ab0!8m2!3d52.2210293!4d21.0168745!16s%2Fg%2F11b66dqkn7!19sChIJld37Qu_MHkcRsHq-w1HQ_yg?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Uki Green",
-        "id": "0x471ecd9f0e87d22f:0x3db145ae5e233689",
-        "latitude": 52.2223082,
-        "longitude": 21.0144058,
-        "url": "https://www.google.com/maps/place/Uki+Green/data=!4m7!3m6!1s0x471ecd9f0e87d22f:0x3db145ae5e233689!8m2!3d52.2223082!4d21.0144058!16s%2Fg%2F11h0g_7jnr!19sChIJL9KHDp_NHkcRiTYjXq5FsT0?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Dyletanci",
-        "id": "0x471eccfea82dd135:0xf4665d5b9ecc1f3",
-        "latitude": 52.222241,
-        "longitude": 21.0145465,
-        "url": "https://www.google.com/maps/place/Dyletanci/data=!4m7!3m6!1s0x471eccfea82dd135:0xf4665d5b9ecc1f3!8m2!3d52.222241!4d21.0145465!16s%2Fg%2F1ptz0r_xl!19sChIJNdEtqP7MHkcR88HsudVlRg8?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "ORZO Verde",
-        "id": "0x471eccef01f39d3d:0xa909f071a4fff84e",
-        "latitude": 52.2222639,
-        "longitude": 21.0152612,
-        "url": "https://www.google.com/maps/place/ORZO+Verde/data=!4m7!3m6!1s0x471eccef01f39d3d:0xa909f071a4fff84e!8m2!3d52.2222639!4d21.0152612!16s%2Fg%2F11b6q841p6!19sChIJPZ3zAe_MHkcRTvj_pHHwCak?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Marcello Warszawa",
-        "id": "0x471ecda7f39f4833:0x7722dc61773af459",
-        "latitude": 52.2235054,
-        "longitude": 21.0166794,
-        "url": "https://www.google.com/maps/place/Marcello+Warszawa/data=!4m7!3m6!1s0x471ecda7f39f4833:0x7722dc61773af459!8m2!3d52.2235054!4d21.0166794!16s%2Fg%2F11q_2yk0td!19sChIJM0if86fNHkcRWfQ6d2HcInc?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Patelnia Patera",
-        "id": "0x471ecd6580f83955:0x20ffbebb223fc068",
-        "latitude": 52.224791,
-        "longitude": 21.0161,
-        "url": "https://www.google.com/maps/place/Patelnia+Patera/data=!4m7!3m6!1s0x471ecd6580f83955:0x20ffbebb223fc068!8m2!3d52.224791!4d21.0161!16s%2Fg%2F11nh99mq7b!19sChIJVTn4gGXNHkcRaMA_Iru-_yA?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Groole",
-        "id": "0x471eccef23937be3:0xadc96bcb1db2203d",
-        "latitude": 52.221621,
-        "longitude": 21.0151292,
-        "url": "https://www.google.com/maps/place/Groole/data=!4m7!3m6!1s0x471eccef23937be3:0xadc96bcb1db2203d!8m2!3d52.221621!4d21.0151292!16s%2Fg%2F113gq5dwt!19sChIJ43uTI-_MHkcRPSCyHctrya0?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Dyspensa. Restauracja",
-        "id": "0x471ecce57c3b8751:0x1772faf318b34973",
-        "latitude": 52.2218391,
-        "longitude": 21.0191071,
-        "url": "https://www.google.com/maps/place/Dyspensa.+Restauracja/data=!4m7!3m6!1s0x471ecce57c3b8751:0x1772faf318b34973!8m2!3d52.2218391!4d21.0191071!16s%2Fg%2F1tfdxly5!19sChIJUYc7fOXMHkcRc0mzGPP6chc?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Wół na Stół",
-        "id": "0x471ecd76350620db:0xbc5ef91882ef4116",
-        "latitude": 52.2237131,
-        "longitude": 21.0176031,
-        "url": "https://www.google.com/maps/place/W%C3%B3%C5%82+na+St%C3%B3%C5%82/data=!4m7!3m6!1s0x471ecd76350620db:0xbc5ef91882ef4116!8m2!3d52.2237131!4d21.0176031!16s%2Fg%2F11j0w8z1w0!19sChIJ2yAGNXbNHkcRFkHvghj5Xrw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "nabe hotpot & bbq & lunch",
-        "id": "0x471ecd139b6924ed:0x25e05f1dfc694c8",
-        "latitude": 52.2242792,
-        "longitude": 21.0155261,
-        "url": "https://www.google.com/maps/place/nabe+hotpot+%26+bbq+%26+lunch/data=!4m7!3m6!1s0x471ecd139b6924ed:0x25e05f1dfc694c8!8m2!3d52.2242792!4d21.0155261!16s%2Fg%2F11yg1pkwcq!19sChIJ7SRpmxPNHkcRyJTG3_EFXgI?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "K-Bar Piękna",
-        "id": "0x471ecd48490ff807:0xc37acc6f5b55d0f",
-        "latitude": 52.2236854,
-        "longitude": 21.0175358,
-        "url": "https://www.google.com/maps/place/K-Bar+Pi%C4%99kna/data=!4m7!3m6!1s0x471ecd48490ff807:0xc37acc6f5b55d0f!8m2!3d52.2236854!4d21.0175358!16s%2Fg%2F11fr39r65g!19sChIJB_gPSUjNHkcRD1219casNww?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Va Bene Cicchetti",
-        "id": "0x471ecd3ac0f4173d:0xcc007aed6938f125",
-        "latitude": 52.2210865,
-        "longitude": 21.0152568,
-        "url": "https://www.google.com/maps/place/Va+Bene+Cicchetti/data=!4m7!3m6!1s0x471ecd3ac0f4173d:0xcc007aed6938f125!8m2!3d52.2210865!4d21.0152568!16s%2Fg%2F11s5jydfwx!19sChIJPRf0wDrNHkcRJfE4ae16AMw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Manekin",
-        "id": "0x471eccef00fa2e75:0x36ddf9623a65d28d",
-        "latitude": 52.2227437,
-        "longitude": 21.0150329,
-        "url": "https://www.google.com/maps/place/Manekin/data=!4m7!3m6!1s0x471eccef00fa2e75:0x36ddf9623a65d28d!8m2!3d52.2227437!4d21.0150329!16s%2Fg%2F11b6v61z_1!19sChIJdS76AO_MHkcRjdJlOmL53TY?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Secret Spice Restauracja",
-        "id": "0x471ecd30f8c4c183:0x186442198c089e80",
-        "latitude": 52.2235038,
-        "longitude": 21.0194433,
-        "url": "https://www.google.com/maps/place/Secret+Spice+Restauracja/data=!4m7!3m6!1s0x471ecd30f8c4c183:0x186442198c089e80!8m2!3d52.2235038!4d21.0194433!16s%2Fg%2F11fmgzv27s!19sChIJg8HE-DDNHkcRgJ4IjBlCZBg?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Pełną Parą",
-        "id": "0x471ecce8cab61995:0xd6ed581fe6529362",
-        "latitude": 52.2201403,
-        "longitude": 21.0143998,
-        "url": "https://www.google.com/maps/place/Pe%C5%82n%C4%85+Par%C4%85/data=!4m7!3m6!1s0x471ecce8cab61995:0xd6ed581fe6529362!8m2!3d52.2201403!4d21.0143998!16s%2Fg%2F11c45wntmq!19sChIJlRm2yujMHkcRYpNS5h9Y7dY?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "La Bàn",
-        "id": "0x471ecd0180fb96b7:0xd244e1589511e97d",
-        "latitude": 52.2249518,
-        "longitude": 21.0195578,
-        "url": "https://www.google.com/maps/place/La+B%C3%A0n/data=!4m7!3m6!1s0x471ecd0180fb96b7:0xd244e1589511e97d!8m2!3d52.2249518!4d21.0195578!16s%2Fg%2F11ll35dwgt!19sChIJt5b7gAHNHkcRfekRlVjhRNI?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Oh My Pho",
-        "id": "0x471eccee25305057:0x2696dbc0f4d4252e",
-        "latitude": 52.2250639,
-        "longitude": 21.0161963,
-        "url": "https://www.google.com/maps/place/Oh+My+Pho/data=!4m7!3m6!1s0x471eccee25305057:0x2696dbc0f4d4252e!8m2!3d52.2250639!4d21.0161963!16s%2Fg%2F11b7xjq9bs!19sChIJV1AwJe7MHkcRLiXU9MDbliY?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Giada Italian Restaurant",
-        "id": "0x471ecd17f4db0883:0x8b8af2dc2b119000",
-        "latitude": 52.2245163,
-        "longitude": 21.0208568,
-        "url": "https://www.google.com/maps/place/Giada+Italian+Restaurant/data=!4m7!3m6!1s0x471ecd17f4db0883:0x8b8af2dc2b119000!8m2!3d52.2245163!4d21.0208568!16s%2Fg%2F11ygy5wkc2!19sChIJgwjb9BfNHkcRAJARK9zyios?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "To To Pho",
-        "id": "0x471ecce58be50dfd:0x8201bb5d6a83e7a2",
-        "latitude": 52.2212279,
-        "longitude": 21.0186018,
-        "url": "https://www.google.com/maps/place/To+To+Pho/data=!4m7!3m6!1s0x471ecce58be50dfd:0x8201bb5d6a83e7a2!8m2!3d52.2212279!4d21.0186018!16s%2Fg%2F11cm057d_d!19sChIJ_Q3li-XMHkcRoueDal27AYI?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Prodiż Warszawski",
-        "id": "0x471eccede4556c9b:0x5c7b909361b84865",
-        "latitude": 52.2252187,
-        "longitude": 21.0119788,
-        "url": "https://www.google.com/maps/place/Prodi%C5%BC+Warszawski/data=!4m7!3m6!1s0x471eccede4556c9b:0x5c7b909361b84865!8m2!3d52.2252187!4d21.0119788!16s%2Fg%2F11c1x2_shb!19sChIJm2xV5O3MHkcRZUi4YZOQe1w?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Namdemun kuchnia koreańska",
-        "id": "0x471ecd2f0e34e67d:0x641953f4f1340252",
-        "latitude": 52.2238513,
-        "longitude": 21.0123553,
-        "url": "https://www.google.com/maps/place/Namdemun+kuchnia+korea%C5%84ska/data=!4m7!3m6!1s0x471ecd2f0e34e67d:0x641953f4f1340252!8m2!3d52.2238513!4d21.0123553!16s%2Fg%2F11ldz4wlxd!19sChIJfeY0Di_NHkcRUgI08fRTGWQ?authuser=0&hl=pl&rclk=1"
+        "name": "Restauracja ukraińska U Sióstr",
+        "id": "0x471ecc8de346b609:0x1dc585671613fdf0",
+        "latitude": 52.2300171,
+        "longitude": 20.9989091,
+        "url": "https://www.google.com/maps/place/Restauracja+ukrai%C5%84ska+U+Si%C3%B3str/data=!4m7!3m6!1s0x471ecc8de346b609:0x1dc585671613fdf0!8m2!3d52.2300171!4d20.9989091!16s%2Fg%2F11b8c50k5n!19sChIJCbZG443MHkcR8P0TFmeFxR0?authuser=0&hl=pl&rclk=1"
     },
     {
         "name": "Soul Kitchen",
@@ -574,88 +343,11 @@
         "url": "https://www.google.com/maps/place/Soul+Kitchen/data=!4m7!3m6!1s0x471ecceea9d27dd9:0x546318f7fcac603!8m2!3d52.2294411!4d21.0149439!16s%2Fg%2F113fx72k_!19sChIJ2X3Sqe7MHkcRA8bKf48xRgU?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Flaming & Co Restaurant",
-        "id": "0x471ecc58a7b68c45:0xbc8a89c15595cb9e",
-        "latitude": 52.2228688,
-        "longitude": 21.0210686,
-        "url": "https://www.google.com/maps/place/Flaming+%26+Co+Restaurant/data=!4m7!3m6!1s0x471ecc58a7b68c45:0xbc8a89c15595cb9e!8m2!3d52.2228688!4d21.0210686!16s%2Fg%2F1tg2jf5h!19sChIJRYy2p1jMHkcRnsuVVcGJirw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Sisters restaurant",
-        "id": "0x471ecd00311a961d:0x5f27552dd107a12e",
-        "latitude": 52.2252754,
-        "longitude": 21.0149406,
-        "url": "https://www.google.com/maps/place/Sisters+restaurant/data=!4m7!3m6!1s0x471ecd00311a961d:0x5f27552dd107a12e!8m2!3d52.2252754!4d21.0149406!16s%2Fg%2F11ymjt0_nt!19sChIJHZYaMQDNHkcRLqEH0S1VJ18?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Smashny Burger",
-        "id": "0x471ecd93f53594db:0xf97a86050e9a49ab",
-        "latitude": 52.2253612,
-        "longitude": 21.0173208,
-        "url": "https://www.google.com/maps/place/Smashny+Burger/data=!4m7!3m6!1s0x471ecd93f53594db:0xf97a86050e9a49ab!8m2!3d52.2253612!4d21.0173208!16s%2Fg%2F11my1l237l!19sChIJ25Q19ZPNHkcRq0maDgWGevk?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Veganda",
-        "id": "0x471ecd5a2ccefbad:0xcb69218d4a18abc",
-        "latitude": 52.220011,
-        "longitude": 21.017018,
-        "url": "https://www.google.com/maps/place/Veganda/data=!4m7!3m6!1s0x471ecd5a2ccefbad:0xcb69218d4a18abc!8m2!3d52.220011!4d21.017018!16s%2Fg%2F11fhr1rnhp!19sChIJrfvOLFrNHkcRvIqh1BiStgw?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "alewino",
-        "id": "0x471eccfaa8ee1225:0xbaf0567eba85ec17",
-        "latitude": 52.225187,
-        "longitude": 21.021753,
-        "url": "https://www.google.com/maps/place/alewino/data=!4m7!3m6!1s0x471eccfaa8ee1225:0xbaf0567eba85ec17!8m2!3d52.225187!4d21.021753!16s%2Fg%2F1tjddyss!19sChIJJRLuqPrMHkcRF-yFun5W8Lo?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Felicita Pizza & Panuozzo",
-        "id": "0x471ecd771f8a61f5:0xe3ad058d8407e75f",
-        "latitude": 52.218808,
-        "longitude": 21.018867,
-        "url": "https://www.google.com/maps/place/Felicita+Pizza+%26+Panuozzo/data=!4m7!3m6!1s0x471ecd771f8a61f5:0xe3ad058d8407e75f!8m2!3d52.218808!4d21.018867!16s%2Fg%2F11ms8s0w83!19sChIJ9WGKH3fNHkcRX-cHhI0FreM?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Charlotte plac Zbawiciela",
-        "id": "0x471ecce5e426360b:0xd5ff1109158e1c4",
-        "latitude": 52.2200841,
-        "longitude": 21.0186389,
-        "url": "https://www.google.com/maps/place/Charlotte+plac+Zbawiciela/data=!4m7!3m6!1s0x471ecce5e426360b:0xd5ff1109158e1c4!8m2!3d52.2200841!4d21.0186389!16s%2Fg%2F1vppr8ll!19sChIJCzYm5OXMHkcRxOFYkRDxXw0?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "NiyomThai",
-        "id": "0x471eccee799d83cd:0xc99c48ff31fcca1e",
-        "latitude": 52.224661,
-        "longitude": 21.0119399,
-        "url": "https://www.google.com/maps/place/NiyomThai/data=!4m7!3m6!1s0x471eccee799d83cd:0xc99c48ff31fcca1e!8m2!3d52.224661!4d21.0119399!16s%2Fg%2F1tdmj71h!19sChIJzYOdee7MHkcRHsr8Mf9InMk?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Ristorante Semolino Hala Koszyki",
-        "id": "0x471eccee9147791b:0xb0f27017d228f947",
-        "latitude": 52.222139,
-        "longitude": 21.0111319,
-        "url": "https://www.google.com/maps/place/Ristorante+Semolino+Hala+Koszyki/data=!4m7!3m6!1s0x471eccee9147791b:0xb0f27017d228f947!8m2!3d52.222139!4d21.0111319!16s%2Fg%2F11c70cfzpx!19sChIJG3lHke7MHkcRR_ko0hdw8rA?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Restauracja Tran Tran",
-        "id": "0x471ecdf5f4f4ab05:0xdd738c403e5e2132",
-        "latitude": 52.2257519,
-        "longitude": 21.0193862,
-        "url": "https://www.google.com/maps/place/Restauracja+Tran+Tran/data=!4m7!3m6!1s0x471ecdf5f4f4ab05:0xdd738c403e5e2132!8m2!3d52.2257519!4d21.0193862!16s%2Fg%2F11h6r1f6nf!19sChIJBav09PXNHkcRMiFePkCMc90?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Soto Sushi",
-        "id": "0x471eccf02aa3856d:0xd1bcee518a2b6361",
-        "latitude": 52.2209052,
-        "longitude": 21.0160241,
-        "url": "https://www.google.com/maps/place/Soto+Sushi/data=!4m7!3m6!1s0x471eccf02aa3856d:0xd1bcee518a2b6361!8m2!3d52.2209052!4d21.0160241!16s%2Fg%2F1hm2dmj_3!19sChIJbYWjKvDMHkcRYWMrilHuvNE?authuser=0&hl=pl&rclk=1"
-    },
-    {
-        "name": "Mokotowska 69",
-        "id": "0x471eccf087125333:0xc751ee71f4bbfa19",
-        "latitude": 52.227313,
-        "longitude": 21.022247,
-        "url": "https://www.google.com/maps/place/Mokotowska+69/data=!4m7!3m6!1s0x471eccf087125333:0xc751ee71f4bbfa19!8m2!3d52.227313!4d21.022247!16s%2Fg%2F1tqtwn26!19sChIJM1MSh_DMHkcRGfq79HHuUcc?authuser=0&hl=pl&rclk=1"
+        "name": "China Hotpot & Grill",
+        "id": "0x471ecd4bea7764f3:0x5ae9c1d891db2329",
+        "latitude": 52.2304299,
+        "longitude": 20.9877131,
+        "url": "https://www.google.com/maps/place/China+Hotpot+%26+Grill/data=!4m7!3m6!1s0x471ecd4bea7764f3:0x5ae9c1d891db2329!8m2!3d52.2304299!4d20.9877131!16s%2Fg%2F11kqr1gzbw!19sChIJ82R36kvNHkcRKSPbkdjB6Vo?authuser=0&hl=pl&rclk=1"
     },
     {
         "name": "Bar Mleczny Lindleya 14",
@@ -672,13 +364,6 @@
         "url": "https://www.google.com/maps/place/Pielmieni+BAR+-+Restauracja+W+Kuchni/data=!4m7!3m6!1s0x471ecda8f7f7f5dd:0x5a16cce789c0aa68!8m2!3d52.2274436!4d21.0021174!16s%2Fg%2F11h3g477y9!19sChIJ3fX396jNHkcRaKrAiefMFlo?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "RASOI Restauracja Indyjska",
-        "id": "0x471ecc8deefcfddb:0xb2c5c9d69bec7a4d",
-        "latitude": 52.2293194,
-        "longitude": 20.9997466,
-        "url": "https://www.google.com/maps/place/RASOI+Restauracja+Indyjska/data=!4m7!3m6!1s0x471ecc8deefcfddb:0xb2c5c9d69bec7a4d!8m2!3d52.2293194!4d20.9997466!16s%2Fg%2F1pt_f7zcr!19sChIJ2_387o3MHkcRTXrsm9bJxbI?authuser=0&hl=pl&rclk=1"
-    },
-    {
         "name": "Beef and Pepper Steak house",
         "id": "0x471eccf28525442f:0x9f75c42e693c6c72",
         "latitude": 52.2277778,
@@ -686,11 +371,25 @@
         "url": "https://www.google.com/maps/place/Beef+and+Pepper+Steak+house/data=!4m7!3m6!1s0x471eccf28525442f:0x9f75c42e693c6c72!8m2!3d52.2277778!4d21.0083333!16s%2Fg%2F11btrrsscc!19sChIJL0QlhfLMHkcRcmw8aS7EdZ8?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "Żarcie Mamuśki",
-        "id": "0x471eccf4601677e5:0xc0f05e452ff0ed23",
-        "latitude": 52.2326511,
-        "longitude": 20.9902204,
-        "url": "https://www.google.com/maps/place/%C5%BBarcie+Mamu%C5%9Bki/data=!4m7!3m6!1s0x471eccf4601677e5:0xc0f05e452ff0ed23!8m2!3d52.2326511!4d20.9902204!16s%2Fg%2F11cs1wf3h0!19sChIJ5XcWYPTMHkcRI-3wL0Ve8MA?authuser=0&hl=pl&rclk=1"
+        "name": "RASOI Restauracja Indyjska",
+        "id": "0x471ecc8deefcfddb:0xb2c5c9d69bec7a4d",
+        "latitude": 52.2293194,
+        "longitude": 20.9997466,
+        "url": "https://www.google.com/maps/place/RASOI+Restauracja+Indyjska/data=!4m7!3m6!1s0x471ecc8deefcfddb:0xb2c5c9d69bec7a4d!8m2!3d52.2293194!4d20.9997466!16s%2Fg%2F1pt_f7zcr!19sChIJ2_387o3MHkcRTXrsm9bJxbI?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "\"Sushi Złota\" Złote Tarasy",
+        "id": "0x471ecdb921667e5d:0x915d37e496cf1e38",
+        "latitude": 52.2297951,
+        "longitude": 21.0031108,
+        "url": "https://www.google.com/maps/place/%22Sushi+Z%C5%82ota%22+Z%C5%82ote+Tarasy/data=!4m7!3m6!1s0x471ecdb921667e5d:0x915d37e496cf1e38!8m2!3d52.2297951!4d21.0031108!16s%2Fg%2F11s58klr1b!19sChIJXX5mIbnNHkcROB7PluQ3XZE?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "N31 Restaurant&Bar",
+        "id": "0x471eccf3cb187c51:0xf614ae33090a5dc7",
+        "latitude": 52.2288769,
+        "longitude": 21.0134836,
+        "url": "https://www.google.com/maps/place/N31+Restaurant%26Bar/data=!4m7!3m6!1s0x471eccf3cb187c51:0xf614ae33090a5dc7!8m2!3d52.2288769!4d21.0134836!16s%2Fg%2F11cjkq086f!19sChIJUXwYy_PMHkcRx10KCTOuFPY?authuser=0&hl=pl&rclk=1"
     },
     {
         "name": "Żabka | Prosto z pieca",
@@ -700,10 +399,136 @@
         "url": "https://www.google.com/maps/place/%C5%BBabka+%7C+Prosto+z+pieca/data=!4m7!3m6!1s0x471ecdb15482aabd:0x1e75591ca266c9!8m2!3d52.2304146!4d20.9932792!16s%2Fg%2F11qg281sns!19sChIJvaqCVLHNHkcRyWaiHFl1HgA?authuser=0&hl=pl&rclk=1"
     },
     {
-        "name": "\"Sushi Złota\" Złote Tarasy",
-        "id": "0x471ecdb921667e5d:0x915d37e496cf1e38",
-        "latitude": 52.2297951,
-        "longitude": 21.0031108,
-        "url": "https://www.google.com/maps/place/%22Sushi+Z%C5%82ota%22+Z%C5%82ote+Tarasy/data=!4m7!3m6!1s0x471ecdb921667e5d:0x915d37e496cf1e38!8m2!3d52.2297951!4d21.0031108!16s%2Fg%2F11s58klr1b!19sChIJXX5mIbnNHkcROB7PluQ3XZE?authuser=0&hl=pl&rclk=1"
+        "name": "Żarcie Mamuśki",
+        "id": "0x471eccf4601677e5:0xc0f05e452ff0ed23",
+        "latitude": 52.2326511,
+        "longitude": 20.9902204,
+        "url": "https://www.google.com/maps/place/%C5%BBarcie+Mamu%C5%9Bki/data=!4m7!3m6!1s0x471eccf4601677e5:0xc0f05e452ff0ed23!8m2!3d52.2326511!4d20.9902204!16s%2Fg%2F11cs1wf3h0!19sChIJ5XcWYPTMHkcRI-3wL0Ve8MA?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "The Eatery",
+        "id": "0x471ed315d621c6d5:0x2cb6e4e910d1c857",
+        "latitude": 52.2223082,
+        "longitude": 21.0144058,
+        "url": "https://www.google.com/maps/place/The+Eatery/data=!4m7!3m6!1s0x471ed315d621c6d5:0x2cb6e4e910d1c857!8m2!3d52.2223082!4d21.0144058!16s%2Fg%2F11n7z7xs3h!19sChIJ1cYh1hXTHkcRV8jREOnktiw?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Floor No 2 Restaurant",
+        "id": "0x471ecd8b30f2159b:0x2c8718ca6a3d4179",
+        "latitude": 52.2279526,
+        "longitude": 21.0045587,
+        "url": "https://www.google.com/maps/place/Floor+No+2+Restaurant/data=!4m7!3m6!1s0x471ecd8b30f2159b:0x2c8718ca6a3d4179!8m2!3d52.2279526!4d21.0045587!16s%2Fg%2F11j4dd173f!19sChIJmxXyMIvNHkcReUE9asoYhyw?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Gaga Restauracja Gruzińska",
+        "id": "0x471ecc916e9ed1e1:0x60deeee14e05893a",
+        "latitude": 52.2257882,
+        "longitude": 20.9940917,
+        "url": "https://www.google.com/maps/place/Gaga+Restauracja+Gruzi%C5%84ska/data=!4m7!3m6!1s0x471ecc916e9ed1e1:0x60deeee14e05893a!8m2!3d52.2257882!4d20.9940917!16s%2Fg%2F1vn_xql3!19sChIJ4dGebpHMHkcROokFTuHu3mA?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Restauracja Słoik",
+        "id": "0x471eccf4a3d86a25:0x9a781cc5fbfdfbc9",
+        "latitude": 52.2323389,
+        "longitude": 21.011317,
+        "url": "https://www.google.com/maps/place/Restauracja+S%C5%82oik/data=!4m7!3m6!1s0x471eccf4a3d86a25:0x9a781cc5fbfdfbc9!8m2!3d52.2323389!4d21.011317!16s%2Fg%2F1pzpxbk7q!19sChIJJWrYo_TMHkcRyfv9-8UceJo?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "CUD MIÓD",
+        "id": "0x471eccf2a96228a9:0x372b1b768ee672a7",
+        "latitude": 52.2277225,
+        "longitude": 21.0065569,
+        "url": "https://www.google.com/maps/place/CUD+MI%C3%93D/data=!4m7!3m6!1s0x471eccf2a96228a9:0x372b1b768ee672a7!8m2!3d52.2277225!4d21.0065569!16s%2Fg%2F1pyckswnh!19sChIJqShiqfLMHkcRp3LmjnYbKzc?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Barek z klimatem",
+        "id": "0x471ecc92476ad84b:0x4766e0df09618dbf",
+        "latitude": 52.2269318,
+        "longitude": 20.9992778,
+        "url": "https://www.google.com/maps/place/Barek+z+klimatem/data=!4m7!3m6!1s0x471ecc92476ad84b:0x4766e0df09618dbf!8m2!3d52.2269318!4d20.9992778!16s%2Fg%2F1tf5chgv!19sChIJS9hqR5LMHkcRv41hCd_gZkc?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Stara Kamienica",
+        "id": "0x471eccf474e8855f:0xad42a8e15dc1ce54",
+        "latitude": 52.2315639,
+        "longitude": 21.015275,
+        "url": "https://www.google.com/maps/place/Stara+Kamienica/data=!4m7!3m6!1s0x471eccf474e8855f:0xad42a8e15dc1ce54!8m2!3d52.2315639!4d21.015275!16s%2Fg%2F1pwfx8q85!19sChIJX4XodPTMHkcRVM7BXeGoQq0?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Seafood Station Restaurant & Oyster Bar Warszawa",
+        "id": "0x471ecd431bb014b7:0x31489dd8d8b3193e",
+        "latitude": 52.2266718,
+        "longitude": 20.998722,
+        "url": "https://www.google.com/maps/place/Seafood+Station+Restaurant+%26+Oyster+Bar+Warszawa/data=!4m7!3m6!1s0x471ecd431bb014b7:0x31489dd8d8b3193e!8m2!3d52.2266718!4d20.998722!16s%2Fg%2F11hktqp9m9!19sChIJtxSwG0PNHkcRPhmz2NidSDE?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "IndiaGate",
+        "id": "0x471ecd509725c921:0xe18da531d8dbb2ff",
+        "latitude": 52.2267576,
+        "longitude": 20.9997872,
+        "url": "https://www.google.com/maps/place/IndiaGate/data=!4m7!3m6!1s0x471ecd509725c921:0xe18da531d8dbb2ff!8m2!3d52.2267576!4d20.9997872!16s%2Fg%2F11j91_9hrb!19sChIJIckll1DNHkcR_7Lb2DGljeE?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Portobello Pizza & Pasta",
+        "id": "0x471ecd2506d28649:0x1158043306de543d",
+        "latitude": 52.2319098,
+        "longitude": 20.9998118,
+        "url": "https://www.google.com/maps/place/Portobello+Pizza+%26+Pasta/data=!4m7!3m6!1s0x471ecd2506d28649:0x1158043306de543d!8m2!3d52.2319098!4d20.9998118!16s%2Fg%2F11fr407j9v!19sChIJSYbSBiXNHkcRPVTeBjMEWBE?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Prodiż Warszawski",
+        "id": "0x471eccede4556c9b:0x5c7b909361b84865",
+        "latitude": 52.2252187,
+        "longitude": 21.0119788,
+        "url": "https://www.google.com/maps/place/Prodi%C5%BC+Warszawski/data=!4m7!3m6!1s0x471eccede4556c9b:0x5c7b909361b84865!8m2!3d52.2252187!4d21.0119788!16s%2Fg%2F11c1x2_shb!19sChIJm2xV5O3MHkcRZUi4YZOQe1w?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Niewinni Czarodzieje 44",
+        "id": "0x471ecdada1c934ed:0x17a81eb906efb44f",
+        "latitude": 52.231054,
+        "longitude": 21.002281,
+        "url": "https://www.google.com/maps/place/Niewinni+Czarodzieje+44/data=!4m7!3m6!1s0x471ecdada1c934ed:0x17a81eb906efb44f!8m2!3d52.231054!4d21.002281!16s%2Fg%2F11kb0zkcs1!19sChIJ7TTJoa3NHkcRT7TvBrkeqBc?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Trattoria da Antonio",
+        "id": "0x471ecdb7b00c83db:0x54668a226bb58643",
+        "latitude": 52.2252465,
+        "longitude": 20.9922148,
+        "url": "https://www.google.com/maps/place/Trattoria+da+Antonio/data=!4m7!3m6!1s0x471ecdb7b00c83db:0x54668a226bb58643!8m2!3d52.2252465!4d20.9922148!16s%2Fg%2F11j048qvxj!19sChIJ24MMsLfNHkcRQ4a1ayKKZlQ?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Parnik Chmielna",
+        "id": "0x471ecc8dec4799e5:0x6ab29903858a8cd3",
+        "latitude": 52.2295096,
+        "longitude": 21.0000207,
+        "url": "https://www.google.com/maps/place/Parnik+Chmielna/data=!4m7!3m6!1s0x471ecc8dec4799e5:0x6ab29903858a8cd3!8m2!3d52.2295096!4d21.0000207!16s%2Fg%2F11by3gmml_!19sChIJ5ZlH7I3MHkcR04yKhQOZsmo?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "La Luce - Restauracja włoska Warszawa",
+        "id": "0x471ecd4206b669b7:0xa5806c78e3f86b4b",
+        "latitude": 52.2287154,
+        "longitude": 21.0098932,
+        "url": "https://www.google.com/maps/place/La+Luce+-+Restauracja+w%C5%82oska+Warszawa/data=!4m7!3m6!1s0x471ecd4206b669b7:0xa5806c78e3f86b4b!8m2!3d52.2287154!4d21.0098932!16s%2Fg%2F11g0gdvczn!19sChIJt2m2BkLNHkcRS2v443hsgKU?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Bliski Wschód Vege Street Food&Cocktail Bar",
+        "id": "0x471ecd57772c7ee1:0xd7db55c74243f7f7",
+        "latitude": 52.2321258,
+        "longitude": 21.0114763,
+        "url": "https://www.google.com/maps/place/Bliski+Wsch%C3%B3d+Vege+Street+Food%26Cocktail+Bar/data=!4m7!3m6!1s0x471ecd57772c7ee1:0xd7db55c74243f7f7!8m2!3d52.2321258!4d21.0114763!16s%2Fg%2F11hsxfgsyy!19sChIJ4X4sd1fNHkcR9_dDQsdV29c?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Paros",
+        "id": "0x471ecc8ad27fcfb1:0xe8b07f5944d62533",
+        "latitude": 52.2277006,
+        "longitude": 21.0035296,
+        "url": "https://www.google.com/maps/place/Paros/data=!4m7!3m6!1s0x471ecc8ad27fcfb1:0xe8b07f5944d62533!8m2!3d52.2277006!4d21.0035296!16s%2Fg%2F1hc2r1mvq!19sChIJsc9_0orMHkcRMyXWRFl_sOg?authuser=0&hl=pl&rclk=1"
+    },
+    {
+        "name": "Restauracja Gangnam",
+        "id": "0x471ecd07ec3d60cd:0xce6fe6a602ed1f1d",
+        "latitude": 52.2274881,
+        "longitude": 20.9823052,
+        "url": "https://www.google.com/maps/place/Restauracja+Gangnam/data=!4m7!3m6!1s0x471ecd07ec3d60cd:0xce6fe6a602ed1f1d!8m2!3d52.2274881!4d20.9823052!16s%2Fg%2F11h9lqxvg7!19sChIJzWA97AfNHkcRHR_tAqbmb84?authuser=0&hl=pl&rclk=1"
     }
 ]
