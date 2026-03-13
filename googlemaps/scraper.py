@@ -1,21 +1,19 @@
 import requests
 import json
 import re
+from fake_useragent import UserAgent
 
 class MapsHttpScraper:
     def __init__(self):
+        self.ua = UserAgent()
         self.session = requests.Session()
-        # Header masquerading is CRITICAL for HTTP scraping
         self.session.headers.update({
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "User-Agent": self.ua.random,
             "Accept-Language": "en-US,en;q=0.9",
             "Referer": "https://www.google.com/"
         })
 
     def search_box(self, query, lat, lon, zoom_side_length):
-        # 1. THE MATH: Convert your center point + box size into a Viewport
-        # Google needs a viewport (NorthEast, SouthWest) in the protobuf
-        # delta roughly for zoom 14/15
         delta = 0.01 
         
         lat_min = lat - delta
@@ -23,14 +21,6 @@ class MapsHttpScraper:
         lon_min = lon - delta
         lon_max = lon + delta
 
-        # 2. THE PAYLOAD (Reversed Engineered)
-        # This specific string tells Google: "Search strictly within this Viewport"
-        # !1d = Lon Min, !2d = Lat Min, !3d = Lon Max, !4d = Lat Max (Note: Order varies, check experimentation)
-        # The crucial part is '4f13.1' which usually represents Zoom level/Resolution.
-        
-        # NOTE: This 'pb' string is a simplified representation. 
-        # In production, you construct this list dynamically.
-        # But injecting into a template is faster for MVP.
         pb_template = (
             f"!1m14!1s{query}"  # Search Query
             f"!4m8!1m3!1d{delta*10000}!2d{lon}!3d{lat}!3m2!1i1024!2i768!4f13.1" # Viewport context
