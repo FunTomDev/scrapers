@@ -7,7 +7,6 @@ def extract_google_data(data):
 
     def find_ids(obj):
         if isinstance(obj, list):
-            # Check if this specific list looks like a Business Entry [None, None, "0x..."]
             if len(obj) >= 3 and isinstance(obj[2], str) and obj[2].startswith("0x0:0x"):
                 results.append(obj[2])
                 return
@@ -19,8 +18,6 @@ def extract_google_data(data):
     return results
 
 def decode_cid(hex_string):
-    # Hex string: "0x0:0xfbd7239c1176804e"
-    # We need the second part: "fbd7239c1176804e"
     try:
         parts = hex_string.split(':')
         hex_cid = parts[1] 
@@ -30,12 +27,10 @@ def decode_cid(hex_string):
     except:
         return None
 
-# --- EXECUTION ---
 business_ids = extract_google_data(raw_response)
 
 print(f"Found {len(business_ids)} businesses:")
 for i, b_id in enumerate(business_ids):
     cid = decode_cid(b_id)
-    # You can now construct the Direct URL for this business
     url = f"https://www.google.com/maps?cid={cid}"
     print(f"{i+1}. ID: {b_id} -> CID: {cid} -> {url}")
