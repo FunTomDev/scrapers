@@ -9,7 +9,7 @@ import random
 import asyncio
 import aiohttp
 
-from config import *  # Restored your config
+from config import *
 
 def get_location_data(query:str):
     ua = UserAgent()
@@ -31,7 +31,7 @@ def get_location_data(query:str):
     try:
         data = response.json()
     except:
-        print("Couldn't parse location json...")
+        print("[WARNING] Couldn't parse location json...")
         data = None
 
     return data
@@ -46,6 +46,7 @@ def extract_polygon(data):
         if geometry_type != "Point":
             print(f"[INFO] Selecting {place['display_name']} as the location.")
             return place["geojson"]
+        
     print("[ERROR] No polygon found for given query.")
     return None
 
@@ -61,52 +62,86 @@ async def fetch_locations_in_bounds(bounds):
         found_items.append({"id": str(uuid.uuid4()), "name": "Some Place"})
     return found_items
 
-global_unique_results = set()
-drawn_squares =[]
+async def search_and_split(bounds, area_polygon, desired_amount, state, current_depth=0, max_depth=20):
+    if state.get('stop', False):
+        return 0
 
-async def search_and_split(bounds, area_polygon, desired_amount, current_depth=0, max_depth=5):
-    global global_unique_results, drawn_squares
-    
-    if len(global_unique_results) >= desired_amount:
-        return
-        
+    ids_len = len(state['seen_ids'])
+    if ids_len >= desired_amount:
+        state['stop'] = True
+        return 0
     if current_depth > max_depth:
-        return
-        
+        return 0
+
     minx, miny, maxx, maxy = bounds
     current_box = box(minx, miny, maxx, maxy)
-    
+
     if not current_box.intersects(area_polygon):
-        return
+        return 0
 
-    drawn_squares.append(current_box)
+    state['drawn_squares'].append(current_box)
+
     results = await fetch_locations_in_bounds(bounds)
-    
-    new_results_count = 0
+
+    added = 0
     for res in results:
-        res_id = res['id']
-        if res_id not in global_unique_results:
-            global_unique_results.add(res_id)
-            new_results_count += 1
-            
-    if new_results_count == 0 and current_depth > 0:
-        return
+        async with state['lock']:
+            if state['stop']:
+                break
+            res_id = res['id']
+            if res_id not in state['seen_ids']:
+                state['seen_ids'].add(res_id)
+                added += 1
+                if len(state['seen_ids']) >= desired_amount:
+                    state['stop'] = True
+                    break
 
-    if len(global_unique_results) < desired_amount:
-        midx = (minx + maxx) / 2.0
-        midy = (miny + maxy) / 2.0
+    if added == 0 and current_depth > 0:
+        return 0
 
-        q1 = (minx, midy, midx, maxy)
-        q2 = (midx, midy, maxx, maxy)
-        q3 = (minx, miny, midx, midy)
-        q4 = (midx, miny, maxx, midy)
+    if state['stop'] or current_depth == max_depth:
+        return added
 
-        tasks =[
-            search_and_split(q, area_polygon, desired_amount, current_depth + 1, max_depth)
-            for q in [q1, q2, q3, q4]
-        ]
-        
-        await asyncio.gather(*tasks)
+    midx = (minx + maxx) / 2.0
+    midy = (miny + maxy) / 2.0
+
+    quadrants = [
+        (minx, midy, midx, maxy),
+        (midx, midy, maxx, maxy),
+        (minx, miny, midx, midy),
+        (midx, miny, maxx, midy)
+    ]
+
+    tasks = [
+        asyncio.create_task(
+            search_and_split(
+                quad,
+                area_polygon,
+                desired_amount,
+                state,
+                current_depth + 1,
+                max_depth
+            )
+        )
+        for quad in quadrants
+    ]
+
+    total_added = added
+    try:
+        for future in asyncio.as_completed(tasks):
+            if state['stop']:
+                break
+            child_added = await future
+            total_added += child_added
+            if state['stop']:
+                break
+    finally:
+        for task in tasks:
+            if not task.done():
+                task.cancel()
+        await asyncio.gather(*tasks, return_exceptions=True)
+
+    return total_added
 
 
 async def main():
@@ -116,14 +151,20 @@ async def main():
     if polygon:
         boundary = shape(polygon)
         print(f"[INFO] Boundary for {query} loaded successfully! Starting async split...")
-        
-        DESIRED_AMOUNT = 15000 
+
+        DESIRED_AMOUNT = 15000
         initial_bounds = boundary.bounds
-        
-        await search_and_split(initial_bounds, boundary, desired_amount=DESIRED_AMOUNT, current_depth=0, max_depth=4)
-        
-        print(f"[INFO] Search complete! Found {len(global_unique_results)} unique results.")
-        print(f"[INFO] Explored {len(drawn_squares)} squares.")
+        state = {
+            'seen_ids': set(),
+            'drawn_squares': [],
+            'stop': False,
+            'lock': asyncio.Lock()
+        }
+
+        await search_and_split(initial_bounds, boundary, DESIRED_AMOUNT, state, current_depth=0, max_depth=20)
+
+        print(f"[INFO] Search complete! Found {len(state['seen_ids'])} unique results.")
+        print(f"[INFO] Explored {len(state['drawn_squares'])} squares.")
 
         centroid = boundary.centroid
         center_lat = centroid.y
@@ -142,7 +183,7 @@ async def main():
             }
         ).add_to(m)
 
-        for i, sq in enumerate(drawn_squares):
+        for i, sq in enumerate(state['drawn_squares']):
             folium.GeoJson(
                 mapping(sq),
                 name="Search Square",
