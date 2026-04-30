@@ -55,7 +55,7 @@ async def fetch_locations_in_bounds(bounds):
     Dummy ASYNC function. 
     REPLACE THIS with your actual API request using `aiohttp` or `httpx`.
     """
-    await asyncio.sleep(0.2) 
+    await asyncio.sleep(0.2)
     
     found_items = []
     for _ in range(random.randint(0, 20)):
@@ -152,7 +152,7 @@ async def main():
         boundary = shape(polygon)
         print(f"[INFO] Boundary for {query} loaded successfully! Starting async split...")
 
-        DESIRED_AMOUNT = 15000
+        DESIRED_AMOUNT = 150000
         initial_bounds = boundary.bounds
         state = {
             'seen_ids': set(),
