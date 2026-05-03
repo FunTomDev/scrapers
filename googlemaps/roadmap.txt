@@ -1,6 +1,0 @@
-✅ ❌
-
-1. Get location polygon map and split it ❌
-2. Generate search link for each coordinate pair ❌
-3. Get a list of 10 objects matching the query ❌
-4. Save data to the storage folder ❌
