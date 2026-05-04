@@ -116,8 +116,12 @@ class GoogleScraper:
         lat = lat or 0.0
         lon = lon or 0.0
         
-        # Google natively encodes the colon in the ID as %3A
-        safe_query = urllib.parse.quote(full_id)
+        try:
+            cid_hex = full_id.split(':')[-1]
+            cid_decimal = str(int(cid_hex, 16))
+            query_val = cid_decimal
+        except Exception:
+            query_val = urllib.parse.quote(full_id)
         
         # If place_name is provided, encode it (otherwise leave it blank)
         safe_name = urllib.parse.quote(place_name) if place_name else ""
@@ -152,11 +156,11 @@ class GoogleScraper:
         
         # Combine the context and the requested data flags
         pb = context_block + data_blocks
-        
-        # EXPLICIT ENCODING: Replace literal '!' with '%21' to exactly mirror the browser
         pb_encoded = pb.replace("!", "%21")
         
-        return f"https://www.google.com/maps/preview/place?authuser=0&hl=en&gl=us&q={safe_query}&pb={pb_encoded}"
+        # THE FIX PART 2: Remove 'gl=us' to stop region-locking the data, 
+        # and use query_val (decimal CID) for 'q' instead of the hex ID.
+        return f"https://www.google.com/maps/preview/place?authuser=0&hl=en&q={query_val}&pb={pb_encoded}"
 
     def _get_search_url(self, keyword, lat, lon, zoom=14, offset=0):
         """Generate search url for given location"""
@@ -209,96 +213,73 @@ class GoogleScraper:
             "opening_hours": None
         }
         
-        id_pattern = re.compile(r'^0x[0-9a-fA-F]{1,16}:0x[0-9a-fA-F]{4,16}$')
-        phone_pattern = re.compile(r'^\+?[0-9\s\-()]{8,20}$')
-
-        def extract_data(obj, depth=0):
-            if depth > 100: return
+        # The primary Place object is ALWAYS at index 6 in the root response array.
+        if not (isinstance(data, list) and len(data) > 6 and isinstance(data[6], list)):
+            return details
             
-            if isinstance(obj, list):
-                if len(obj) >= 15 and isinstance(obj[10], str) and id_pattern.match(obj[10]):
-                    if details["id"]:
-                        try:
-                            cid_hex = details["id"].split(':')[1]
-                            cid_int = int(cid_hex, 16)
-                            details["cid"] = cid_int
-                            details["url"] = f"https://www.google.com/maps?cid={cid_int}"
-                        except Exception:
-                            pass
-                    
-                    if not details["id"]: details["id"] = obj[10]
-                    
-                    if not details["name"] and len(obj) > 11 and isinstance(obj[11], str):
-                        details["name"] = obj[11]
-                        
-                    if not details["address"] and len(obj) > 18 and isinstance(obj[18], str):
-                        addr_parts = obj[18].split(",")
-                        if len(addr_parts) > 1:
-                            details["address"] = ", ".join(addr_parts[1:]).strip()
-                        else:
-                            details["address"] = obj[18].strip()
-                        
-                    if not details["website"] and len(obj) > 7 and isinstance(obj[7], list) and len(obj[7]) > 0:
-                        if isinstance(obj[7][0], str) and obj[7][0].startswith("http"):
-                            details["website"] = obj[7][0]
-                            
-                    if not details["latitude"] and len(obj) > 9 and isinstance(obj[9], list) and len(obj[9]) >= 4:
-                        if type(obj[9][2]) in (int, float): details["latitude"] = float(obj[9][2])
-                        if type(obj[9][3]) in (int, float): details["longitude"] = float(obj[9][3])
-                        
-                    if not details["type"] and len(obj) > 13 and isinstance(obj[13], list) and len(obj[13]) > 0:
-                        if isinstance(obj[13][0], str): details["type"] = obj[13][0]
-                        
-                    # EXACT RATING & REVIEWS LOCATION: Index 4 holds an array, rating at 7, count at 8
-                    if not details["rating"] and len(obj) > 4 and isinstance(obj[4], list) and len(obj[4]) >= 8:
-                        if type(obj[4][7]) in (int, float) and 1.0 <= obj[4][7] <= 5.0:
-                            details["rating"] = float(obj[4][7])
-                        if len(obj[4]) >= 9 and type(obj[4][8]) is int and obj[4][8] > 0:
-                            details["reviews_count"] = obj[4][8]
+        entity = data[6]
 
-                if details["opening_hours"] is None and len(obj) >= 7:
-                    days =[]
-                    for item in obj:
-                        if (isinstance(item, list) and len(item) >= 4 and 
-                            isinstance(item[0], str) and 
-                            isinstance(item[1], int) and 1 <= item[1] <= 7 and
-                            isinstance(item[2], list) and len(item[2]) == 3 and # Validates the[YYYY, MM, DD] array
-                            isinstance(item[3], list)):
-                            
-                            day_name = item[0]
-                            hours_str = ""
-                            if len(item[3]) > 0 and isinstance(item[3][0], list) and len(item[3][0]) > 0:
-                                hours_str = str(item[3][0][0])  # Grabs "12-9 pm" or "Closed"
-                            
-                            days.append((day_name, hours_str))
-                    
-                    if len(days) >= 7:
-                        details["opening_hours"] = {d[0]: d[1] for d in days[:7]}
-
-                for item in obj:
-                    if isinstance(item, str):
-                        if not details["phone"] and phone_pattern.match(item):
-                            digit_count = sum(c.isdigit() for c in item)
-                            if 7 <= digit_count <= 15:
-                                details["phone"] = item
-                                
-                    extract_data(item, depth + 1)
-                    
-            elif isinstance(obj, dict):
-                for val in obj.values():
-                    extract_data(val, depth + 1)
-
-        extract_data(data)
-        
-        if details["id"]:
+        # 1. ID & CID
+        if len(entity) > 10 and isinstance(entity[10], str):
+            details["id"] = entity[10]
             try:
-                cid_hex = details["id"].split(':')[1]
-                cid_int = int(cid_hex, 16)
-                details["cid"] = cid_int
-                details["url"] = f"https://www.google.com/maps?cid={cid_int}"
-            except Exception:
-                pass
-                
+                details["cid"] = int(details["id"].split(':')[1], 16)
+                details["url"] = f"https://www.google.com/maps?cid={details['cid']}"
+            except Exception: pass
+
+        # 2. Name
+        if len(entity) > 11 and isinstance(entity[11], str):
+            details["name"] = entity[11]
+
+        # 3. Address
+        if len(entity) > 18 and isinstance(entity[18], str):
+            addr_parts = entity[18].split(",")
+            details["address"] = ", ".join(addr_parts[1:]).strip() if len(addr_parts) > 1 else entity[18].strip()
+
+        # 4. Coordinates
+        if len(entity) > 9 and isinstance(entity[9], list) and len(entity[9]) >= 4:
+            if type(entity[9][2]) in (int, float): details["latitude"] = float(entity[9][2])
+            if type(entity[9][3]) in (int, float): details["longitude"] = float(entity[9][3])
+
+        # 5. Type (Category)
+        if len(entity) > 13 and isinstance(entity[13], list) and len(entity[13]) > 0:
+            if isinstance(entity[13][0], str): details["type"] = entity[13][0]
+
+        # 6. Phone (Regex scan just the top level of the entity)
+        phone_pattern = re.compile(r'^\+?[0-9\s\-()]{8,20}$')
+        for item in entity:
+            if isinstance(item, str) and phone_pattern.match(item):
+                if 7 <= sum(c.isdigit() for c in item) <= 15:
+                    details["phone"] = item
+                    break
+
+        # 7. Website
+        if len(entity) > 7 and isinstance(entity[7], list) and len(entity[7]) > 0:
+            if isinstance(entity[7][0], str) and entity[7][0].startswith("http"):
+                details["website"] = entity[7][0]
+
+        # 8. Rating & Reviews Block (Index 4) - Using the safe heuristic
+        if len(entity) > 4 and isinstance(entity[4], list):
+            for i, item in enumerate(entity[4]):
+                if type(item) in (float, int) and 1.0 <= item <= 5.0:
+                    details["rating"] = float(item)
+                    for offset in (1, 2):
+                        if i + offset < len(entity[4]) and type(entity[4][i + offset]) is int:
+                            details["reviews_count"] = entity[4][i + offset]
+                            break
+                    break
+
+        # 9. Opening Hours (Index 34)
+        if len(entity) > 34 and isinstance(entity[34], list):
+            days = []
+            for item in entity[34]:
+                if (isinstance(item, list) and len(item) >= 4 and isinstance(item[0], str) and 
+                    isinstance(item[2], list) and isinstance(item[3], list)):
+                    hours_str = str(item[3][0][0]) if len(item[3]) > 0 and isinstance(item[3][0], list) and len(item[3][0]) > 0 else ""
+                    days.append((item[0], hours_str))
+            if len(days) >= 7:
+                details["opening_hours"] = {d[0]: d[1] for d in days[:7]}
+
         return details
 
     async def get_details_by_id(self, session, full_id, name="", lat=None, lon=None, zoom=14.0):
@@ -317,6 +298,7 @@ class GoogleScraper:
             details = self._extract_details_from_cid(data)
             
             if details and details.get("name"):
+                if details.get("name") == "Forest Burger": print(url)
                 return details
             
         except json.JSONDecodeError:
