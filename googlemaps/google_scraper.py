@@ -6,6 +6,7 @@ import urllib.parse
 import random
 import logging
 from shapely.geometry import Point, box
+from curl_cffi.requests import AsyncSession
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -74,15 +75,16 @@ class GoogleScraper:
             headers["User-Agent"] =  random.choice(self.desktop_uas)
             
             try:
-                async with session.get(url, headers=headers, timeout=10) as response:
-                    if response.status == 429:
-                        wait_time = (2 ** attempt) + random.uniform(0, 1)
-                        logging.warning(f"429 Too Many Requests. Retrying in {wait_time:.2f}s...")
-                        await asyncio.sleep(wait_time)
-                        continue
-                    
-                    if response.status == 200:
-                        return await response.text()
+                response = await session.get(url, headers=self.base_headers, timeout=15)
+
+                if response.status_code == 429: # Note: status_code instead of status
+                    wait_time = (2 ** attempt) + random.uniform(1.0, 3.0)
+                    logging.warning(f"429 Too Many Requests. Retrying in {wait_time:.2f}s...")
+                    await asyncio.sleep(wait_time)
+                    continue
+                
+                if response.status_code == 200:
+                    return response.text
                         
             except Exception as e:
                 logging.debug(f"Request failed: {url[:80]}... - {e}")
@@ -493,8 +495,7 @@ class GoogleScraper:
             "SOCS": "CAISHAgCEhJnd3NfMjAyMzA4MTAtMF9SQzIaAmVuIAEaBgiAo_CmBg"
         }
         
-        jar = aiohttp.CookieJar(unsafe=True)
-        async with aiohttp.ClientSession(cookie_jar=jar, headers=self.base_headers, cookies=google_cookies) as session:   
+        async with AsyncSession(impersonate="chrome120", cookies=google_cookies) as session: 
 
             logging.info("Warming up session cookies...")
             try:
