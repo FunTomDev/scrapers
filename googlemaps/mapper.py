@@ -30,7 +30,7 @@ def extract_polygon(data):
 
 async def main():
     query = "Warsaw"
-    keyword = "restaurant"
+    keyword = "mcdonalds"
     
     data = get_location_data(query)
     polygon_geojson = extract_polygon(data)
@@ -46,7 +46,7 @@ async def main():
             keyword=keyword,
             initial_bounds=initial_bounds,
             target_count=100,
-            max_depth=10,
+            max_depth=8,
             trust_threshold=15
         )
 

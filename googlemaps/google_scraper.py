@@ -222,6 +222,7 @@ class GoogleScraper:
         # 1. ID & CID
         if len(entity) > 10 and isinstance(entity[10], str):
             details["id"] = entity[10]
+            
             try:
                 details["cid"] = int(details["id"].split(':')[1], 16)
                 details["url"] = f"https://www.google.com/maps?cid={details['cid']}"
@@ -230,6 +231,8 @@ class GoogleScraper:
         # 2. Name
         if len(entity) > 11 and isinstance(entity[11], str):
             details["name"] = entity[11]
+        
+        # print(entity[10], entity[4])
 
         # 3. Address
         if len(entity) > 18 and isinstance(entity[18], str):
@@ -268,6 +271,7 @@ class GoogleScraper:
                             details["reviews_count"] = entity[4][i + offset]
                             break
                     break
+            print(details["reviews_count"])
 
         # 9. Opening Hours (Index 34)
         if len(entity) > 34 and isinstance(entity[34], list):
@@ -279,6 +283,7 @@ class GoogleScraper:
                     days.append((item[0], hours_str))
             if len(days) >= 7:
                 details["opening_hours"] = {d[0]: d[1] for d in days[:7]}
+                print(details["opening_hours"])
 
         return details
 
