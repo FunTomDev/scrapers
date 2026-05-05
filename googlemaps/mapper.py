@@ -30,7 +30,7 @@ def extract_polygon(data):
 
 async def main():
     query = "Warsaw"
-    keyword = "mcdonalds"
+    keyword = "kfc"
     
     data = get_location_data(query)
     polygon_geojson = extract_polygon(data)
@@ -45,9 +45,9 @@ async def main():
         results = await scraper.grid_search(
             keyword=keyword,
             initial_bounds=initial_bounds,
-            target_count=100,
-            max_depth=8,
-            trust_threshold=15
+            target_count=10,
+            max_depth=128,
+            trust_threshold=5
         )
 
         print(f"[INFO] Search complete! Found {len(results)} unique results.")

@@ -57,6 +57,8 @@ class GoogleScraper:
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0"
         ]
 
+        self.session_ua = random.choice(self.desktop_uas)
+
         self.base_headers = {
             "Accept": "*/*",
             "Accept-Language": "en-US,en;q=0.9",
@@ -69,7 +71,7 @@ class GoogleScraper:
 
         for attempt in range(max_retries):
             headers = self.base_headers.copy()
-            headers["User-Agent"] = random.choice(self.desktop_uas)
+            headers["User-Agent"] =  random.choice(self.desktop_uas)
             
             try:
                 async with session.get(url, headers=headers, timeout=10) as response:
@@ -110,7 +112,7 @@ class GoogleScraper:
         return inner.build()
 
     
-    def get_rich_details_url(self, full_id, lat, lon, zoom=14.0, place_name=""):
+    def get_rich_details_url(self, full_id, lat, lon, zoom=14.0, place_name="", session_token=""):
         """Get url for business details exactly mirroring Google's native preview payload."""
         
         lat = lat or 0.0
@@ -122,44 +124,79 @@ class GoogleScraper:
             query_val = cid_decimal
         except Exception:
             query_val = urllib.parse.quote(full_id)
+            
+        # Initialize root builder
+        root = ProtoBuilder()
         
-        # If place_name is provided, encode it (otherwise leave it blank)
-        safe_name = urllib.parse.quote(place_name) if place_name else ""
+        # --- BLOCK 1: Build the !1m14 Context Block ---
+        m1 = ProtoBuilder()
+        m1.add_string(1, full_id)
         
-        # 1. CONTEXT BLOCK (!1m14)
-        # Token Count Breakdown remains exactly 14:
-        # !1s (1) + !2s (1) + !3m8 (9) + !4m2 (3) = 14 tokens
-        context_block = (
-            f"!1m14"
-            f"!1s{full_id}"
-            f"!2s{safe_name}"
-            f"!3m8!1m3!1d5000!2d{lon}!3d{lat}!3m2!1i1024!2i768!4f{zoom}"
-            f"!4m2!3d{lat}!4d{lon}"
+        m3 = ProtoBuilder()
+        
+        # Viewport delta & center (!1m3)
+        m3_1 = ProtoBuilder()
+        m3_1.add_double(1, 19551.814223056626)  # Or calculate via your delta formula
+        m3_1.add_double(2, lon)
+        m3_1.add_double(3, lat)
+        m3.add_message(1, m3_1)
+        
+        # Pitch/Heading (!2m3)
+        m3_2 = ProtoBuilder()
+        m3_2.add_float(1, 0.0)
+        m3_2.add_float(2, 0.0)
+        m3_2.add_float(3, 0.0)
+        m3.add_message(2, m3_2)
+        
+        # Screen dimensions (!3m2)
+        m3_3 = ProtoBuilder()
+        m3_3.add_int(1, 1024)
+        m3_3.add_int(2, 768)
+        m3.add_message(3, m3_3)
+        
+        m3.add_float(4, float(zoom))
+        
+        # This will perfectly compile to !1m14... !3m12...
+        m1.add_message(3, m3)
+        root.add_message(1, m1)
+        
+        # --- BLOCK 2: Build the !12m4 Block ---
+        m12 = ProtoBuilder()
+        m12_2 = ProtoBuilder()
+        m12_2.add_int(1, 360)
+        m12_2.add_int(2, 120)
+        m12_2.add_int(4, 8)
+        m12.add_message(2, m12_2)
+        root.add_message(12, m12)
+        
+        # Generate the dynamic prefix
+        pb_prefix = root.build()
+        
+        # --- BLOCK 3: Static Data Requests ---
+        # Hardcoded at the root level so it doesn't corrupt ProtoBuilder's node counts
+        pb_static = (
+            f"!13m57!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240"
+            f"!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0"
+            f"!15m8!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20"
         )
         
-        # 2. DATA BLOCKS (The exact 100+ arguments from your Google URL)
-        # We have removed ONLY the session token (!14m3!1seIv...) because it expires and causes bans.
-        # We also removed the Knowledge Graph ID (!15m2!1m1!4s) because we don't know it beforehand,
-        # but because it was a sibling block, its removal doesn't break the tree math.
-        data_blocks = (
-            f"!12m4!2m3!1i360!2i120!4i8"
-            f"!13m57!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0"
-            f"!15m8!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20"
+        # --- BLOCK 4: Dynamic Session Token ---
+        pb_token = ""
+        if session_token:
+            # Note: !7e81 uses an enum 'e' which isn't in ProtoBuilder, so we append raw
+            pb_token = f"!14m3!1s{session_token}!7e81"
+            
+        # --- BLOCK 5: The Massive Payload Tail ---
+        pb_tail = (
             f"!15i10112"
             f"!15m108!1m26!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m15!3b1!4b1!5b1!6b1!13b1!14b1!17b1!21b1!22b1!30b1!32b1!33m1!1b1!34b1!36e2!10m1!8e3!11m1!3e1!17b1!20m2!1e3!1e6!24b1!25b1!26b1!27b1!29b1!30m1!2b1!36b1!37b1!39m3!2m2!2i1!3i1!43b1!52b1!54m1!1b1!55b1!56m1!1b1!61m2!1m1!1e1!65m5!3m4!1m3!1m2!1i224!2i298!72m22!1m8!2b1!5b1!7b1!12m4!1b1!2b1!4m1!1e1!4b1!8m10!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_google_review_posts__and__hotel_and_vr_partner_review_posts!6m1!1e1!9b1!89b1!90m2!1m1!1e2!98m3!1b1!2b1!3b1!103b1!113b1!114m3!1b1!2m1!1b1!117b1!122m1!1b1!126b1!127b1!128m1!1b0"
-            f"!21m0"
-            f"!22m1!1e81"
-            f"!30m8!3b1!6m2!1b1!2b1!7m2!1e3!2b1!9b1"
-            f"!34m5!7b1!10b1!14b1!15m1!1b0"
-            f"!37i777"
+            f"!21m0!22m1!1e81!30m8!3b1!6m2!1b1!2b1!7m2!1e3!2b1!9b1!34m5!7b1!10b1!14b1!15m1!1b0!37i778"
         )
         
-        # Combine the context and the requested data flags
-        pb = context_block + data_blocks
+        # Assemble and encode
+        pb = pb_prefix + pb_static + pb_token + pb_tail
         pb_encoded = pb.replace("!", "%21")
         
-        # THE FIX PART 2: Remove 'gl=us' to stop region-locking the data, 
-        # and use query_val (decimal CID) for 'q' instead of the hex ID.
         return f"https://www.google.com/maps/preview/place?authuser=0&hl=en&q={query_val}&pb={pb_encoded}"
 
     def _get_search_url(self, keyword, lat, lon, zoom=14, offset=0):
@@ -271,7 +308,6 @@ class GoogleScraper:
                             details["reviews_count"] = entity[4][i + offset]
                             break
                     break
-            print(details["reviews_count"])
 
         # 9. Opening Hours (Index 34)
         if len(entity) > 34 and isinstance(entity[34], list):
@@ -283,27 +319,30 @@ class GoogleScraper:
                     days.append((item[0], hours_str))
             if len(days) >= 7:
                 details["opening_hours"] = {d[0]: d[1] for d in days[:7]}
-                print(details["opening_hours"])
 
         return details
 
-    async def get_details_by_id(self, session, full_id, name="", lat=None, lon=None, zoom=14.0):
+    async def get_details_by_id(self, session, full_id, name="", lat=None, lon=None, zoom=14.0, session_token=""):
         """Get details of business by its FID"""
 
-        url = self.get_rich_details_url(full_id, lat, lon, zoom)
+        url = self.get_rich_details_url(full_id, lat, lon, zoom, session_token=session_token)
+        print(url)
         text = await self._fetch_with_retry(session, url)
         if not text:
             return None
             
         if text.startswith(")]}'"):
             text = text[4:]
+        
+        with open("check.json", 'w') as f:
+            f.write(text)
+
         try:
             data = json.loads(text)
             
             details = self._extract_details_from_cid(data)
             
             if details and details.get("name"):
-                if details.get("name") == "Forest Burger": print(url)
                 return details
             
         except json.JSONDecodeError:
@@ -311,6 +350,47 @@ class GoogleScraper:
                 
         return None
 
+    def _extract_session_token(self, data):
+        """
+        Extracts the dynamic session token using exact positional mapping.
+        Falls back to a relaxed regex if the array structure changes.
+        """
+        # 1. PRIMARY METHOD: Positional Extraction (Fastest & Most Accurate)
+        try:
+            # Navigating to data[0][1][0][8] based on known search payload structure
+            if isinstance(data, list) and len(data) > 0:
+                block_0 = data[0]
+                if isinstance(block_0, list) and len(block_0) > 1:
+                    block_1 = block_0[1]
+                    if isinstance(block_1, list) and len(block_1) > 0:
+                        target_array = block_1[0]
+                        # Ensure the array is long enough and grab index 8
+                        if isinstance(target_array, list) and len(target_array) > 8:
+                            token = target_array[8]
+                            if isinstance(token, str) and not token.startswith("0x"):
+                                return token
+        except Exception as e:
+            logging.debug(f"Positional token extraction failed/shifted: {e}")
+
+        # 2. FALLBACK METHOD: Relaxed Regex Scan
+        # Accepts 20-28 characters of Base64URL to account for variable padding
+        token_pattern = re.compile(r'^[A-Za-z0-9_-]{20,28}$')
+        
+        def find_token(obj, depth=0):
+            if depth > 15: return None
+            
+            if isinstance(obj, list):
+                for item in obj:
+                    res = find_token(item, depth + 1)
+                    if res: return res
+            elif isinstance(obj, str):
+                # Ignore hex IDs and timestamps (pure digits)
+                if token_pattern.match(obj) and not obj.startswith('0x') and not obj.isdigit():
+                    return obj
+            return None
+            
+        return find_token(data)
+    
     async def search(self, session, query, lat, lon, seen_ids, zoom=14, max_results=20):
         """Search for results in given location dictated by latitude and longitude"""
 
@@ -326,11 +406,18 @@ class GoogleScraper:
                 
             if text.startswith(")]}'"):
                 text = text[4:]
-                
+
             try:
                 data = json.loads(text)
             except json.JSONDecodeError:
                 break
+
+            session_token = self._extract_session_token(data)
+            
+            if session_token:
+                print(f"Successfully extracted session token: {session_token}")
+            else:
+                logging.warning("Could not find session token in search data. Details payload may be degraded.")
 
             id_items = self._extract_ids_from_search(data)
             if not id_items:
@@ -340,7 +427,7 @@ class GoogleScraper:
             for id_item in id_items:
                 item_id = id_item["id"]
                 if item_id not in seen_ids and item_id not in [r.get("id") for r in all_results]:
-                    tasks.append(self.get_details_by_id(session, item_id, query, lat, lon, zoom))
+                    tasks.append(self.get_details_by_id(session, item_id, query, lat, lon, zoom, session_token))
             
             if not tasks:
                 break
@@ -407,7 +494,14 @@ class GoogleScraper:
         }
         
         jar = aiohttp.CookieJar(unsafe=True)
-        async with aiohttp.ClientSession(cookie_jar=jar, headers=self.base_headers, cookies=google_cookies) as session:          
+        async with aiohttp.ClientSession(cookie_jar=jar, headers=self.base_headers, cookies=google_cookies) as session:   
+
+            logging.info("Warming up session cookies...")
+            try:
+                await session.get("https://www.google.com/?hl=en", headers=self.base_headers)
+            except Exception as e:
+                logging.debug(f"Warmup ping failed: {e}")
+
             await self._recursive_grid_scrape(
                 session, keyword, starting_box, state, 0, max_depth, target_count, trust_threshold
             )
